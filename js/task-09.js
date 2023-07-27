@@ -14,6 +14,4 @@ function changeBackgroundColor(event) {
   colorNameRef.textContent = getRandomHexColor();
 }
 
-buttonRef.addEventListener("click", changeBackgroundColor)
-
-
+buttonRef.addEventListener("click", changeBackgroundColor);
