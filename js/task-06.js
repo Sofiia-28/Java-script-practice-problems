@@ -2,13 +2,19 @@ const inputText = document.getElementById("validation-input");
 const inputLength = Number(inputText.dataset.length);
 
 function checkLength(event) {
-  if (event.currentTarget.value.length >= inputLength) {
-    inputText.classList.add("valid");
-    inputText.classList.remove("invalid");
+  if (event.currentTarget.value.length === inputLength) {
+    changeClass("invalid", "valid");
   } else {
-    inputText.classList.remove("valid");
-    inputText.classList.add("invalid");
+    changeClass("valid", "invalid")
   }
 }
 
+function changeClass(a, b) {
+  inputText.classList.remove(a);
+  inputText.classList.add(b);
+}
+
 inputText.addEventListener("blur", checkLength);
+
+
+

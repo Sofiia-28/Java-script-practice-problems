@@ -6,8 +6,9 @@ function login(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (email.value === "" || password.value === "") {
+  if (email.value.trim() === "" || password.value.trim() === "") {
     alert("Please fill in all the fields!");
+    return
   }
 
   console.log({ Email: `${email.value}`, Password: `${password.value}` });
